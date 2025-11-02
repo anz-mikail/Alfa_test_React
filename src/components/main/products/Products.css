@@ -1,0 +1,92 @@
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin: 100px 10px 20px 10px;
+    gap: 10px;
+    height: 100%;
+}
+.checkboxForm {
+    position: fixed;
+    top: 105px;
+    left: 20px;
+    z-index: 101;
+    font-size: 20px;
+}
+.checkboxLabel {
+    margin-right: 170px;
+}
+.checkbox {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+}
+.favorites {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cadetblue;
+    position: relative;
+    width: 282px;
+    height: 40px;
+    top: 40px;
+    padding: 0 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.heart-icon,.like-icon,.disLike-icon {
+    width: 20px;
+    height: 20px;
+    z-index: 100
+}
+.like-icon:hover,.disLike-icon:hover {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.disLike-icon {
+    transform: rotate(180deg);
+}
+.disLike-icon:active,.like-icon:active{
+    transition: 0.3s;
+    transform: rotate(720deg);
+
+}
+.products {
+    box-shadow: black 3px 4px 4px;
+    border-radius: 5px;
+    padding: 40px 10px 30px 10px;
+    height: 60px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex; /* Располагает элементы списка горизонтально */
+    justify-content: center; /* Центрирует пагинацию */
+    list-style: none; /* Убирает маркеры списка */
+    padding: 0;
+    margin-top: 20px;
+}
+.pagination li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pagination li a.active {
+    background-color: dodgerblue; /* Цвет активной страницы */
+    color: white;
+    border: 1px solid dodgerblue;
+}
+
+.pagination li a:hover:not(.active) {
+    background-color: #ddd; /* Цвет при наведении */
+}

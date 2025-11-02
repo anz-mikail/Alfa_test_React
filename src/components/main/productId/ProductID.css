@@ -1,0 +1,13 @@
+.favorites-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 30px;
+}
+.save-btn {
+    display: none;
+}
+.change-product-text {
+    display: none;
+    font-size: 20px;
+}
