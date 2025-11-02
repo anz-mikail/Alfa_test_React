@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Alfa_React/static/css/main.1184d8ff.css",
+    "main.js": "/Alfa_React/static/js/main.9adbbe7c.js",
+    "static/media/Cheri.otf": "/Alfa_React/static/media/Cheri.60b3e9a74366a33f587d.otf",
+    "index.html": "/Alfa_React/index.html",
+    "main.1184d8ff.css.map": "/Alfa_React/static/css/main.1184d8ff.css.map",
+    "main.9adbbe7c.js.map": "/Alfa_React/static/js/main.9adbbe7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1184d8ff.css",
+    "static/js/main.9adbbe7c.js"
+  ]
+}
