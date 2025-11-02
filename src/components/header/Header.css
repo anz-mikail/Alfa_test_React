@@ -12,7 +12,24 @@ nav {
     font-family: Cheri, Helvetica, sans-serif;
     letter-spacing: 5px;
 }
-
+.clear-btn {
+    position: relative;
+    left: -300px;
+    top: 15px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    font-size: 20px;
+    cursor: pointer;
+}
+.clear-btn:hover {
+    color: white;
+    border-color: white;
+}
+.clear-btn:active {
+    color: black;
+    border-color: black;
+}
 .cat-icon{
     margin: 20px 0 0 30px;
     width: 60px;

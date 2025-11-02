@@ -35,6 +35,12 @@ function Products () {
     }
     const handleChangeCheckbox = () => {
         setFavorite(!favorite)
+        if (!favorite) {
+            setStartIndex(0)
+            setEndIndex(base.length)
+        } else {
+            setEndIndex(12)
+        }
     }
     const handleClickProduct = (event: number) => {
         navigate(`/products/${event}`)
@@ -42,7 +48,7 @@ function Products () {
 
     useEffect(() => {
         const paginationElement: Element | any = document.querySelector('.pagination');
-        const itemsPerPage = 12;
+        const itemsPerPage = favorite? base.length: 12;
         const totalPages = Math.ceil(base.length / itemsPerPage);
         let currentPage = 1;
 
@@ -142,9 +148,9 @@ function Products () {
                             <div key={index}>
                                 <div className='favorites'>
                                     <img src={like} alt="like" className='like-icon'
-                                         onClick={() => clickLike(index)}/>
+                                         onClick={() => clickLike(startIndex + index)}/>
                                     <img src={like} alt="like" className='disLike-icon'
-                                         onClick={() => clickDisLike(index)}/>
+                                         onClick={() => clickDisLike(startIndex + index)}/>
                                     {item.like > 0 ?
                                         <img src={heartRed} alt="heart" className='heart-icon'/> :
                                         <img src={heart} alt="heart" className='heart-icon'/>
@@ -152,14 +158,14 @@ function Products () {
                                     <p>{item?.like}</p>
                                     {item.favorites ?
                                         <img src={favoriteBlack} alt="favorite" className='like-icon'
-                                             onClick={() => clickAddFavorite(index)}/> :
+                                             onClick={() => clickAddFavorite(startIndex + index)}/> :
                                         <img src={favoriteIcon} alt="favorite" className='like-icon'
-                                             onClick={() => clickAddFavorite(index)}/>
+                                             onClick={() => clickAddFavorite(startIndex + index)}/>
                                     }
                                     <img src={deleteIcon} alt="delete" className='like-icon'
-                                         onClick={() => clickDelete(index)}/>
+                                         onClick={() => clickDelete(startIndex + index)}/>
                                 </div>
-                                <div className="products" onClick={() => handleClickProduct(index)}>
+                                <div className="products" onClick={() => handleClickProduct(startIndex + index)}>
                                     {item.text}
                                 </div>
                             </div>
